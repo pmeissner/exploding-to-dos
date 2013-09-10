@@ -1,0 +1,18 @@
+{
+  "name": "Exploding To-Do",
+  "version": "1",
+  "description": "Makes completed to-dos go kaboom!",
+  "permissions": ["tabs", "activeTab", "http://*/*", "https://*/*"],
+  "icons": { "128": "icon_128.png" },
+  "web_accessible_resources": [
+    "audio/bomb.wav","img/explosion.gif"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://basecamp.com/*"],
+      "js": ["bg.js"],
+      "css": [ "bg.css" ]
+    }
+  ],
+  "manifest_version": 2
+}
